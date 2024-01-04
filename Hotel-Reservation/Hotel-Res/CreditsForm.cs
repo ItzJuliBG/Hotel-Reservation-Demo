@@ -23,13 +23,11 @@ namespace Hotel_Reservations
             form.Show();
             this.Hide();
         }
-<<<<<<< HEAD
 
         private void button7_Click(object sender, EventArgs e)
         {
             Close();
         }
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
     }
 }

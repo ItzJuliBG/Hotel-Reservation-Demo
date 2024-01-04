@@ -39,10 +39,9 @@
             label4 = new Label();
             button1 = new Button();
             pictureBox1 = new PictureBox();
-<<<<<<< HEAD
+
             button7 = new Button();
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -116,39 +115,33 @@
             // 
             // button1
             // 
-<<<<<<< HEAD
+
             button1.Cursor = Cursors.Hand;
             button1.Location = new Point(12, 12);
-=======
+
             button1.Location = new Point(61, 12);
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
             button1.Name = "button1";
             button1.Size = new Size(58, 57);
             button1.TabIndex = 8;
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
-            // 
-            // pictureBox1
-            // 
-<<<<<<< HEAD
+
             pictureBox1.Cursor = Cursors.Hand;
             pictureBox1.Enabled = false;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(12, 12);
-=======
+
             pictureBox1.Enabled = false;
             pictureBox1.Image = (Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new Point(61, 12);
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(58, 57);
             pictureBox1.SizeMode = PictureBoxSizeMode.StretchImage;
             pictureBox1.TabIndex = 9;
             pictureBox1.TabStop = false;
-            // 
-<<<<<<< HEAD
-            // button7
-            // 
+ 
             button7.Cursor = Cursors.Hand;
             button7.Location = new Point(12, 397);
             button7.Name = "button7";
@@ -157,18 +150,13 @@
             button7.Text = "Exit";
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
-            // 
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
-            // CreditsForm
-            // 
+
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-<<<<<<< HEAD
+
             Controls.Add(button7);
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
             Controls.Add(pictureBox1);
             Controls.Add(button1);
             Controls.Add(progressBar4);
@@ -198,9 +186,8 @@
         private Label label4;
         private Button button1;
         private PictureBox pictureBox1;
-<<<<<<< HEAD
+
         private Button button7;
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+
     }
 }

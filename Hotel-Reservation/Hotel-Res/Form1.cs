@@ -1,22 +1,15 @@
-<<<<<<< HEAD
 using Hotel_Res;
 using Hotel_Res.Models;
 
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
 namespace Hotel_Reservations
 {
     public partial class Form1 : Form
     {
-<<<<<<< HEAD
         List<Room> Rooms = new List<Room>();
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
         public Form1()
         {
             InitializeComponent();
         }
-<<<<<<< HEAD
         private void Form1_Load(object sender, EventArgs e)
         {
             string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
@@ -42,12 +35,6 @@ namespace Hotel_Reservations
             this.Hide();
             AllRoomsForm form = new AllRoomsForm();
             form.Show();
-=======
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -57,7 +44,6 @@ namespace Hotel_Reservations
             creditsForm.Show();
             this.Hide();
         }
-<<<<<<< HEAD
 
         private void button7_Click(object sender, EventArgs e)
         {
@@ -71,7 +57,5 @@ namespace Hotel_Reservations
             makeReservationForm.Show();
         }
 
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
     }
 }

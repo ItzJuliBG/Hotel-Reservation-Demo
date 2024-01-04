@@ -34,22 +34,14 @@
             button4 = new Button();
             button3 = new Button();
             button5 = new Button();
-<<<<<<< HEAD
             button7 = new Button();
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             SuspendLayout();
             // 
             // button1
             // 
-<<<<<<< HEAD
             button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(290, 104);
-=======
-            button1.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(290, 130);
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             button1.Name = "button1";
             button1.Size = new Size(226, 104);
             button1.TabIndex = 0;
@@ -69,10 +61,7 @@
             // 
             // button2
             // 
-<<<<<<< HEAD
             button2.Cursor = Cursors.Hand;
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             button2.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
             button2.Location = new Point(12, 202);
             button2.Name = "button2";
@@ -83,10 +72,7 @@
             // 
             // button4
             // 
-<<<<<<< HEAD
             button4.Cursor = Cursors.Hand;
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             button4.Font = new Font("Segoe UI", 19F, FontStyle.Regular, GraphicsUnit.Point);
             button4.Location = new Point(576, 202);
             button4.Name = "button4";
@@ -97,30 +83,19 @@
             // 
             // button3
             // 
-<<<<<<< HEAD
             button3.Cursor = Cursors.Hand;
             button3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
             button3.Location = new Point(290, 270);
-=======
-            button3.Font = new Font("Segoe UI", 20.25F, FontStyle.Regular, GraphicsUnit.Point);
-            button3.Location = new Point(290, 262);
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             button3.Name = "button3";
             button3.Size = new Size(226, 104);
             button3.TabIndex = 5;
             button3.Text = "Направи резервация";
             button3.UseVisualStyleBackColor = true;
-<<<<<<< HEAD
             button3.Click += button3_Click;
             // 
             // button5
             // 
             button5.Cursor = Cursors.Hand;
-=======
-            // 
-            // button5
-            // 
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             button5.Font = new Font("Segoe UI Semibold", 12F, FontStyle.Bold, GraphicsUnit.Point);
             button5.Location = new Point(622, 397);
             button5.Name = "button5";
@@ -130,7 +105,6 @@
             button5.UseVisualStyleBackColor = true;
             button5.Click += button5_Click;
             // 
-<<<<<<< HEAD
             // button7
             // 
             button7.Cursor = Cursors.Hand;
@@ -142,17 +116,12 @@
             button7.UseVisualStyleBackColor = true;
             button7.Click += button7_Click;
             // 
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
-<<<<<<< HEAD
             Controls.Add(button7);
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             Controls.Add(button5);
             Controls.Add(button3);
             Controls.Add(button4);
@@ -161,10 +130,7 @@
             Controls.Add(button1);
             Name = "Form1";
             Text = "Form1";
-<<<<<<< HEAD
             Load += Form1_Load;
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
             ResumeLayout(false);
             PerformLayout();
         }
@@ -177,9 +143,6 @@
         private Button button4;
         private Button button3;
         private Button button5;
-<<<<<<< HEAD
         private Button button7;
-=======
->>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
     }
 }
