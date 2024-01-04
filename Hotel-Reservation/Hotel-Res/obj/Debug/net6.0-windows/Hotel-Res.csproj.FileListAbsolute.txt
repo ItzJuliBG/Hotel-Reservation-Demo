@@ -1,0 +1,42 @@
+<<<<<<< HEAD
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.exe
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.deps.json
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.runtimeconfig.json
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.dll
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.pdb
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.AllRoomsForm.resources
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.CleanRoomForm.resources
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.CreditsForm.resources
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.Form1.resources
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.Properties.Resources.resources
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.csproj.GenerateResource.cache
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.GeneratedMSBuildEditorConfig.editorconfig
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.AssemblyInfoInputs.cache
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.AssemblyInfo.cs
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.csproj.CoreCompileInputs.cache
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.dll
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\refint\Hotel-Res.dll
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.pdb
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.genruntimeconfig.cache
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\ref\Hotel-Res.dll
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.MakeReservationForm.resources
+=======
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.exe
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.deps.json
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.runtimeconfig.json
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.dll
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.pdb
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.CreditsForm.resources
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.Form1.resources
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.Properties.Resources.resources
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.csproj.GenerateResource.cache
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.AssemblyInfoInputs.cache
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.AssemblyInfo.cs
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.csproj.CoreCompileInputs.cache
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.dll
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\refint\Hotel-Res.dll
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.pdb
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.genruntimeconfig.cache
+D:\Projects\Hotel-Reservations\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\ref\Hotel-Res.dll
+>>>>>>> dbde9d76882aaa05da548767156143df68d30d2b

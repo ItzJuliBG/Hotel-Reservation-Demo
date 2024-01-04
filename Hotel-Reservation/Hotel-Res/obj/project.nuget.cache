@@ -1,0 +1,14 @@
+{
+  "version": 2,
+<<<<<<< HEAD
+  "dgSpecHash": "Kdi5Gn4LVPcTiTNnlNW6ikoGuvKkQ4U1ytXzGTHxnksbIzZkyD7i+uQQ76xHaBtZ4ntOP7rnFb5wyIGOtG9IbQ==",
+  "success": true,
+  "projectFilePath": "X:\\School Projects\\Hotel-Reservation-Demo\\Hotel-Reservation\\Hotel-Res\\Hotel-Res.csproj",
+=======
+  "dgSpecHash": "4q2mJqetINvo0EuWkQeYeM5BbuT8gq0iR1C/96XlPJ+rVZoIgmFclq2Z6hqDeeYYsRzeve23OlJoRHR0S9goxQ==",
+  "success": true,
+  "projectFilePath": "D:\\Projects\\Hotel-Reservations\\Hotel-Reservation\\Hotel-Res\\Hotel-Res.csproj",
+>>>>>>> dbde9d76882aaa05da548767156143df68d30d2b
+  "expectedPackageFiles": [],
+  "logs": []
+}
