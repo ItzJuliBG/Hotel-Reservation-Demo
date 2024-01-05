@@ -24,7 +24,25 @@ namespace Hotel_Res
         }
         private void MakeReservationForm_Load(object sender, EventArgs e)
         {
+            string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
+            using StreamReader reader = new StreamReader(filePath2);
 
+            if (reader.ReadLine() != null || reader.ReadLine() != "")
+            {
+                while (reader.EndOfStream != true)
+                {
+                    var t = reader.ReadLine();
+                    var newLine = t.Split(", ");
+                    int roomNumber = int.Parse(newLine[0]);
+                    string name = newLine[1];
+                    string roomType = newLine[2];
+
+                    var roomToAdd = new Room(roomNumber, name, roomType);
+
+                    Rooms.Add(roomToAdd);
+
+                }
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -46,9 +64,6 @@ namespace Hotel_Res
 
 
 
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             int roomNumber = int.Parse(textBox1.Text);
@@ -58,30 +73,38 @@ namespace Hotel_Res
             if (roomNumber <= 0 || roomNumber > 30)
             {
                 MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
+
             }
-            if (roomType != "Апартамент" && roomType != "Стая")
+            else if (reservationName == null || reservationName == "")
+            {
+                MessageBox.Show($"Името на резервацията е задължително!");
+
+            }
+            else if (roomType != "Апартамент" && roomType != "Стая")
             {
                 MessageBox.Show($"Не пиши там :) {Environment.NewLine}Избери от стрелката вдясно!");
             }
-
-
-            var roomToAdd = new Room(roomNumber, reservationName, roomType);
-
-            Rooms.Add(roomToAdd);
-
-            string filePath = $"..\\..\\..\\LocalStorage";
-            Directory.CreateDirectory(filePath);
-            string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
-
-
-
-            foreach (var room in Rooms)
+            else
             {
-                using (StreamWriter writer = new StreamWriter(filePath2))
-                {
-                    // Write content to the file for the current room
-                    writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}");
-                }
+                var roomToAdd = new Room(roomNumber, reservationName, roomType);
+
+                Rooms.Add(roomToAdd);
+
+                string filePath = $"..\\..\\..\\LocalStorage";
+                Directory.CreateDirectory(filePath);
+                string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
+
+                MessageBox.Show($"Успешно направена резервация на името на {reservationName}!");
+
+                using (StreamWriter writer = new StreamWriter(filePath2, true))
+
+                    foreach (var room in Rooms)
+                    {
+
+                        // Write content to the file for the current room
+                        writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}");
+
+                    }
             }
 
         }

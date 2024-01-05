@@ -1,5 +1,6 @@
 using Hotel_Res;
 using Hotel_Res.Models;
+using System.DirectoryServices.ActiveDirectory;
 
 namespace Hotel_Reservations
 {
@@ -12,21 +13,22 @@ namespace Hotel_Reservations
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
-            using StreamReader reader = new StreamReader(filePath2);
-            string t = null;
-            while ((t = reader.ReadLine()) != null || t != "")
-            {
-                var newLine = t.Split(", ");
-                int roomNumber = int.Parse(newLine[0]);
-                string name = newLine[1];
-                string roomType = newLine[2];
+            //string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
+            //using StreamReader reader = new StreamReader(filePath2);
 
-                var roomToAdd = new Room(roomNumber, name, roomType);
+            //while (reader.EndOfStream != true)
+            //{
+            //    var t = reader.ReadLine();
+            //    var newLine = t.Split(", ");
+            //    int roomNumber = int.Parse(newLine[0]);
+            //    string name = newLine[1];
+            //    string roomType = newLine[2];
 
-                Rooms.Add(roomToAdd);
+            //    var roomToAdd = new Room(roomNumber, name, roomType);
 
-            }
+            //    Rooms.Add(roomToAdd);
+
+            //}
 
         }
 
@@ -35,6 +37,7 @@ namespace Hotel_Reservations
             this.Hide();
             AllRoomsForm form = new AllRoomsForm();
             form.Show();
+            
         }
 
         private void button5_Click(object sender, EventArgs e)

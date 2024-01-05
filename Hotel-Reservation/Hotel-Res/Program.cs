@@ -12,6 +12,9 @@ namespace Hotel_Reservations
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             Application.Run(new Form1());
+
+
+            //Fixed - All rooms datagrid and delete all record button now refresh the datagrid info
         }
     }
 }

@@ -1,3 +1,0 @@
-Number of room: 12
-Reservation Name: dfg
-Room Type: Стая
