@@ -27,7 +27,8 @@ namespace Hotel_Res
             string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
             using StreamReader reader = new StreamReader(filePath2);
 
-            if (reader.ReadLine() != null || reader.ReadLine() != "")
+            int charsRemeining = reader.Peek();
+            if (charsRemeining > 1)//problem here
             {
                 while (reader.EndOfStream != true)
                 {
@@ -74,6 +75,10 @@ namespace Hotel_Res
             {
                 MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
 
+            }
+            else if (Rooms.Any(x => x.RoomNumber == roomNumber))
+            {
+                MessageBox.Show($"Вече има направена резервация в тази стая!"); //not fully working
             }
             else if (reservationName == null || reservationName == "")
             {
@@ -122,6 +127,11 @@ namespace Hotel_Res
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
