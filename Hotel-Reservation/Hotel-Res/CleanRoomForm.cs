@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,13 +16,12 @@ namespace Hotel_Res
     public partial class CleanRoomForm : Form
     {
         List<Room> Rooms;
+        List<Room> newListRooms = new();
         public CleanRoomForm()
         {
             InitializeComponent();
             Rooms = new List<Room>();
-        }
-        private void CleanRoomForm_Load(object sender, EventArgs e)
-        {
+
             string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
             using StreamReader reader = new StreamReader(filePath2);
 
@@ -30,6 +30,7 @@ namespace Hotel_Res
             {
                 while (reader.EndOfStream != true)
                 {
+
                     var t = reader.ReadLine();
                     var newLine = t.Split(", ");
                     int roomNumber = int.Parse(newLine[0]);
@@ -42,6 +43,10 @@ namespace Hotel_Res
 
                 }
             }
+        }
+        private void CleanRoomForm_Load(object sender, EventArgs e)
+        {
+
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -66,12 +71,43 @@ namespace Hotel_Res
             string input = textBox1.Text;
             if (int.TryParse(input, out _))
             {
-                int roomNumber = int.Parse(input);
-                if (roomNumber < 1 || roomNumber > 30)
+                int inputNumber = int.Parse(input);
+                if (inputNumber < 1 || inputNumber > 30)
                 {
                     MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
                 }
-                Room currentRoom = Rooms.FirstOrDefault(x=> x.RoomNumber == roomNumber);
+                else
+                {
+                    Room currentRoom = Rooms.FirstOrDefault(x => x.RoomNumber == inputNumber);
+                    string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
+                    using (StreamReader reader = new StreamReader(filePath2))
+               
+
+                    while (reader.EndOfStream != true)
+                    {
+                        var t = reader.ReadLine();
+                        var newLine = t.Split(", ");
+                        int currentNumber = int.Parse(newLine[0]);
+                        string name = newLine[1];
+                        string roomType = newLine[2];
+                        if (currentNumber == inputNumber)
+                        {
+                            var roomToAdd = new Room(currentNumber, name, roomType);
+                            newListRooms.Add(roomToAdd);
+                        }
+                    }
+
+                    using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
+
+                    foreach (var room in newListRooms)
+                    {
+
+                        // Write content to the file for the current room
+                        writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, false");
+
+                    }
+
+                }
             }
             else
             {

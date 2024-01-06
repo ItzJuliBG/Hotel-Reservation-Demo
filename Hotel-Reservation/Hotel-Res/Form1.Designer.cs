@@ -69,6 +69,7 @@
             button2.TabIndex = 2;
             button2.Text = "Търсене на стая";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button4
             // 
@@ -80,6 +81,7 @@
             button4.TabIndex = 4;
             button4.Text = "Изчисти стая";
             button4.UseVisualStyleBackColor = true;
+            button4.Click += button4_Click;
             // 
             // button3
             // 

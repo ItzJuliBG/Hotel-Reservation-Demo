@@ -37,7 +37,7 @@ namespace Hotel_Reservations
             this.Hide();
             AllRoomsForm form = new AllRoomsForm();
             form.Show();
-            
+
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -60,5 +60,16 @@ namespace Hotel_Reservations
             makeReservationForm.Show();
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            CleanRoomForm cleanRoomForm = new CleanRoomForm();
+            cleanRoomForm.Show();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

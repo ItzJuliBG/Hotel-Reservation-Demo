@@ -28,7 +28,7 @@ namespace Hotel_Res
             using StreamReader reader = new StreamReader(filePath2);
 
             int charsRemeining = reader.Peek();
-            if (charsRemeining > 1)//problem here
+            if (charsRemeining > 1)
             {
                 while (reader.EndOfStream != true)
                 {
@@ -78,7 +78,7 @@ namespace Hotel_Res
             }
             else if (Rooms.Any(x => x.RoomNumber == roomNumber))
             {
-                MessageBox.Show($"Вече има направена резервация в тази стая!"); //not fully working
+                MessageBox.Show($"Вече има направена резервация в тази стая!");
             }
             else if (reservationName == null || reservationName == "")
             {
@@ -101,7 +101,7 @@ namespace Hotel_Res
 
                 MessageBox.Show($"Успешно направена резервация на името на {reservationName}!");
 
-                using (StreamWriter writer = new StreamWriter(filePath2, true))
+                using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
 
                     foreach (var room in Rooms)
                     {

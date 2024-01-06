@@ -29,24 +29,33 @@ namespace Hotel_Res
 
             var t = reader.ReadLine();
             //peek
-        
-                while (t != null)
+
+            while (t != null)
+            {
+                var newLine = t.Trim().Split(", ");
+                int roomNumber = int.Parse(newLine[0]);
+                string name = newLine[1];
+                string roomType = newLine[2];
+
+                Room roomToAdd;
+                if (newLine.Length == 4)
                 {
-                    var newLine = t.Trim().Split(", ");
-                    int roomNumber = int.Parse(newLine[0]);
-                    string name = newLine[1];
-                    string roomType = newLine[2];
-
-                    var roomToAdd = new Room(roomNumber, name, roomType);
-
-                    Rooms.Add(roomToAdd);
-                    t = reader.ReadLine();
+                    roomToAdd = new Room(roomNumber, name, roomType, false);
+                }
+                else
+                {
+                    roomToAdd = new Room(roomNumber, name, roomType);
                 }
 
-                dataGridView1.DataSource = Rooms;
-                
-            
-            
+
+                Rooms.Add(roomToAdd);
+                t = reader.ReadLine();
+            }
+
+            dataGridView1.DataSource = Rooms;
+
+
+
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -82,7 +91,7 @@ namespace Hotel_Res
         {
             string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
             using (StreamWriter writer = new StreamWriter(filePath2)) ;
-            this.Hide() ;
+            this.Hide();
             AllRoomsForm form = new AllRoomsForm();
             form.Show();
         }

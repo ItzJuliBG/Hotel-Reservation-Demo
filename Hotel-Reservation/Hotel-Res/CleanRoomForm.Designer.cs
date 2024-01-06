@@ -40,20 +40,20 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(58, 113);
+            label1.Font = new Font("Segoe UI", 23F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(172, 114);
             label1.Name = "label1";
-            label1.Size = new Size(692, 32);
+            label1.Size = new Size(437, 42);
             label1.TabIndex = 0;
-            label1.Text = "Номер на стая която желаете да отбележете като изчистена:";
+            label1.Text = "Номер на стая за изчистване:";
             label1.Click += label1_Click;
             // 
             // textBox1
             // 
-            textBox1.Location = new Point(129, 195);
-            textBox1.Multiline = true;
+            textBox1.Font = new Font("Microsoft Sans Serif", 19.69F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(140, 195);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(517, 52);
+            textBox1.Size = new Size(506, 37);
             textBox1.TabIndex = 1;
             textBox1.TextChanged += textBox1_TextChanged;
             // 
@@ -81,10 +81,10 @@
             // 
             // button1
             // 
-            button1.Font = new Font("Segoe UI", 13F, FontStyle.Regular, GraphicsUnit.Point);
-            button1.Location = new Point(258, 348);
+            button1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(259, 289);
             button1.Name = "button1";
-            button1.Size = new Size(242, 63);
+            button1.Size = new Size(253, 68);
             button1.TabIndex = 18;
             button1.Text = "Маркирай като изчистена";
             button1.UseVisualStyleBackColor = true;

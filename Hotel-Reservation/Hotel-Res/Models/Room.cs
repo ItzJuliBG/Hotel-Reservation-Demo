@@ -12,27 +12,39 @@ namespace Hotel_Res.Models
 		private int roomNumber;
 
 		private string roomType;
-		private bool isDirty;
+		private bool isCleaned;
+        private bool isOccupated;
 
         public Room(int roomNumber, string reservationName, string roomType)
         {
             this.roomNumber = roomNumber;
             this.reservationName = reservationName;
             this.roomType = roomType;
-			this.isDirty = false;
+			this.isCleaned = true;
+			this.isOccupated = false;
+
         }
         public Room(int roomNumber, string reservationName, string roomType, bool isDirty)
         {
             this.roomNumber = roomNumber;
             this.reservationName = reservationName;
             this.roomType = roomType;
-			this.isDirty = isDirty;
+			this.isCleaned = isDirty;
+			this.isOccupated = false;
         }
 
-        public bool IsDirty
+
+
+        public bool IsOccupated
 		{
-			get { return isDirty; }
-			private set { isDirty = value; }
+			get { return isOccupated; }
+			private set { isOccupated = value; }
+		}
+
+		public bool IsCleaned
+		{
+			get { return isCleaned; }
+			private set { isCleaned = value; }
 		}
 
 		public string RoomType

@@ -5,7 +5,6 @@ X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\bin\Debug\net6.0-windows\Hotel-Res.pdb
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.AllRoomsForm.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.CleanRoomForm.resources
-X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.CreditsForm.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Reservations.Form1.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.MakeReservationForm.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.Properties.Resources.resources
@@ -40,3 +39,4 @@ C:\Users\User 3\Desktop\Hotel-Reservation-Demo-main\Hotel-Reservation-Demo-main\
 C:\Users\User 3\Desktop\Hotel-Reservation-Demo-main\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.pdb
 C:\Users\User 3\Desktop\Hotel-Reservation-Demo-main\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel-Res.genruntimeconfig.cache
 C:\Users\User 3\Desktop\Hotel-Reservation-Demo-main\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\ref\Hotel-Res.dll
+X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.CreditsForm.resources
