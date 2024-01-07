@@ -1,27 +1,28 @@
-﻿using Hotel_Res.Models;
-using Hotel_Res.Utilities;
-using Hotel_Reservations;
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+using Hotel_Res.Models;
+using Hotel_Res.Utilities;
+using Hotel_Reservations;
+
 namespace Hotel_Res
 {
-    public partial class CleanRoomForm : Form
+    public partial class FreeingRoomForm : Form
     {
+
         List<Room> Rooms;
         List<Room> newListRooms = new();
-        public CleanRoomForm()
+        public FreeingRoomForm()
         {
             InitializeComponent();
+
             Rooms = new List<Room>();
 
             string filePath2 = FilePaths.ReservationFileSavePath;
@@ -41,7 +42,7 @@ namespace Hotel_Res
                     bool isCleaned = bool.Parse(newLine[3]);
                     bool isOccupated = bool.Parse(newLine[4]);
 
-                    
+
                     var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
 
                     Rooms.Add(roomToAdd);
@@ -49,26 +50,12 @@ namespace Hotel_Res
                 }
             }
         }
-        private void CleanRoomForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form = new Form1();
             form.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -85,15 +72,15 @@ namespace Hotel_Res
                 {
                     Room currentRoom = Rooms.FirstOrDefault(x => x.RoomNumber == inputNumber);
 
-                    if (currentRoom.IsCleaned == true)
+                    if (currentRoom.IsOccupated == false)
                     {
-                        MessageBox.Show($"Тази стая е чиста вече!");
+                        MessageBox.Show($"Тази стая е свободна вече!");
                     }
                     else
                     {
-                        currentRoom.IsCleaned = true;
-                        
-                        MessageBox.Show($"Стаята е изчистена!");
+                        currentRoom.IsOccupated = false;
+                        currentRoom.ReservationName = "";
+                        MessageBox.Show($"Стаята е освободена!");
                     }
 
                     Room roomToAdd;
@@ -113,7 +100,7 @@ namespace Hotel_Res
                         newListRooms.Add(roomToAdd);
                     }
 
-                    string filePath2 = FilePaths.ReservationFileSavePath;
+                    string filePath2 =FilePaths.ReservationFileSavePath;
                     using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
 
                         foreach (var room in newListRooms)

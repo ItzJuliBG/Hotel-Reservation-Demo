@@ -1,6 +1,6 @@
 ﻿namespace Hotel_Res
 {
-    partial class AllRoomsForm
+    partial class FreeingRoomForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AllRoomsForm));
-            dataGridView1 = new DataGridView();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FreeingRoomForm));
+            button1 = new Button();
             pictureBox2 = new PictureBox();
             button2 = new Button();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            textBox1 = new TextBox();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // button1
             // 
-            dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(30, 103);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.ReadOnly = true;
-            dataGridView1.RowHeadersWidth = 51;
-            dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(728, 303);
-            dataGridView1.TabIndex = 0;
-            dataGridView1.CellContentClick += dataGridView1_CellContentClick;
+            button1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Location = new Point(259, 289);
+            button1.Name = "button1";
+            button1.Size = new Size(253, 68);
+            button1.TabIndex = 23;
+            button1.Text = "Маркирай като освободена";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click;
             // 
             // pictureBox2
             // 
@@ -57,42 +55,62 @@
             pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new Point(12, 12);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(66, 57);
+            pictureBox2.Size = new Size(68, 57);
             pictureBox2.SizeMode = PictureBoxSizeMode.StretchImage;
-            pictureBox2.TabIndex = 13;
+            pictureBox2.TabIndex = 22;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // button2
             // 
             button2.Cursor = Cursors.Hand;
             button2.Location = new Point(12, 12);
             button2.Name = "button2";
-            button2.Size = new Size(66, 57);
-            button2.TabIndex = 12;
+            button2.Size = new Size(68, 57);
+            button2.TabIndex = 21;
             button2.UseVisualStyleBackColor = true;
             button2.Click += button2_Click;
             // 
-            // AllRoomsForm
+            // textBox1
+            // 
+            textBox1.Font = new Font("Microsoft Sans Serif", 19.69F, FontStyle.Regular, GraphicsUnit.Point);
+            textBox1.Location = new Point(140, 195);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(506, 37);
+            textBox1.TabIndex = 20;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 23F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Location = new Point(146, 109);
+            label1.Name = "label1";
+            label1.Size = new Size(500, 42);
+            label1.TabIndex = 19;
+            label1.Text = "Номер на стая за освобождаване:";
+            // 
+            // FreeingRoomForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(button1);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
-            Controls.Add(dataGridView1);
-            Name = "AllRoomsForm";
-            Text = " ";
-            Load += AllRoomsForm_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            Controls.Add(textBox1);
+            Controls.Add(label1);
+            Name = "FreeingRoomForm";
+            Text = "FreeingRoomForm";
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private Button button1;
         private PictureBox pictureBox2;
         private Button button2;
+        private TextBox textBox1;
+        private Label label1;
     }
 }

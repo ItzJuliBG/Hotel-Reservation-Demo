@@ -1,5 +1,7 @@
 ﻿using Hotel_Res.Models;
+using Hotel_Res.Utilities;
 using Hotel_Reservations;
+
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -24,38 +26,26 @@ namespace Hotel_Res
 
         private void AllRoomsForm_Load(object sender, EventArgs e)
         {
-            string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
+            string filePath2 = FilePaths.ReservationFileSavePath;
             using StreamReader reader = new StreamReader(filePath2);
 
-            var t = reader.ReadLine();
-            //peek
-
-            while (t != null)
+            while (reader.EndOfStream != true)
             {
-                var newLine = t.Trim().Split(", ");
+                var t = reader.ReadLine();
+                var newLine = t.Split(", ");
                 int roomNumber = int.Parse(newLine[0]);
                 string name = newLine[1];
                 string roomType = newLine[2];
+                bool isCleaned = bool.Parse(newLine[3]);
+                bool isOccupated = bool.Parse(newLine[4]);
 
-                Room roomToAdd;
-                if (newLine.Length == 4)
-                {
-                    roomToAdd = new Room(roomNumber, name, roomType, false);
-                }
-                else
-                {
-                    roomToAdd = new Room(roomNumber, name, roomType);
-                }
-
+                var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
 
                 Rooms.Add(roomToAdd);
-                t = reader.ReadLine();
+
             }
 
             dataGridView1.DataSource = Rooms;
-
-
-
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -87,13 +77,9 @@ namespace Hotel_Res
 
         }
 
-        private void button1_Click_1(object sender, EventArgs e)
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            string filePath2 = $"..\\..\\..\\LocalStorage\\text.txt";
-            using (StreamWriter writer = new StreamWriter(filePath2)) ;
-            this.Hide();
-            AllRoomsForm form = new AllRoomsForm();
-            form.Show();
+
         }
     }
 }

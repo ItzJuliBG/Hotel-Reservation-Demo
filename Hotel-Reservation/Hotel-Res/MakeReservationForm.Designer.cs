@@ -33,8 +33,6 @@
             textBox1 = new TextBox();
             textBox2 = new TextBox();
             label2 = new Label();
-            label3 = new Label();
-            comboBox1 = new ComboBox();
             pictureBox2 = new PictureBox();
             button2 = new Button();
             button1 = new Button();
@@ -45,7 +43,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 21F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(207, 14);
+            label1.Location = new Point(205, 48);
             label1.Name = "label1";
             label1.Size = new Size(356, 38);
             label1.TabIndex = 0;
@@ -54,7 +52,7 @@
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox1.Location = new Point(149, 55);
+            textBox1.Location = new Point(149, 101);
             textBox1.Name = "textBox1";
             textBox1.Size = new Size(471, 39);
             textBox1.TabIndex = 1;
@@ -63,7 +61,7 @@
             // textBox2
             // 
             textBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            textBox2.Location = new Point(149, 172);
+            textBox2.Location = new Point(149, 233);
             textBox2.Name = "textBox2";
             textBox2.Size = new Size(471, 39);
             textBox2.TabIndex = 3;
@@ -72,34 +70,12 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 21F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(261, 131);
+            label2.Location = new Point(241, 174);
             label2.Name = "label2";
             label2.Size = new Size(275, 38);
             label2.TabIndex = 2;
             label2.Text = "Име на резервация:";
             label2.Click += label2_Click;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 21F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(261, 246);
-            label3.Name = "label3";
-            label3.Size = new Size(241, 38);
-            label3.TabIndex = 4;
-            label3.Text = "Стая/Апартамент:";
-            label3.Click += label3_Click;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Items.AddRange(new object[] { "Стая", "Апартамент" });
-            comboBox1.Location = new Point(149, 287);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(471, 40);
-            comboBox1.TabIndex = 6;
-            comboBox1.SelectedIndexChanged += comboBox1_SelectedIndexChanged;
             // 
             // pictureBox2
             // 
@@ -131,7 +107,7 @@
             button1.Name = "button1";
             button1.Size = new Size(255, 68);
             button1.TabIndex = 16;
-            button1.Text = "Добавяне";
+            button1.Text = "Резервиране";
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
@@ -143,8 +119,6 @@
             Controls.Add(button1);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
-            Controls.Add(comboBox1);
-            Controls.Add(label3);
             Controls.Add(textBox2);
             Controls.Add(label2);
             Controls.Add(textBox1);
@@ -163,8 +137,6 @@
         private TextBox textBox1;
         private TextBox textBox2;
         private Label label2;
-        private Label label3;
-        private ComboBox comboBox1;
         private PictureBox pictureBox2;
         private Button button2;
         private Button button1;

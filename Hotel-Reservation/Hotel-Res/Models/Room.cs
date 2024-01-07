@@ -15,22 +15,14 @@ namespace Hotel_Res.Models
 		private bool isCleaned;
         private bool isOccupated;
 
-        public Room(int roomNumber, string reservationName, string roomType)
-        {
-            this.roomNumber = roomNumber;
-            this.reservationName = reservationName;
-            this.roomType = roomType;
-			this.isCleaned = true;
-			this.isOccupated = false;
 
-        }
-        public Room(int roomNumber, string reservationName, string roomType, bool isDirty)
-        {
+		public Room(int roomNumber, string reservationName, string roomType, bool isCleaned, bool isOccupated)
+		{
             this.roomNumber = roomNumber;
             this.reservationName = reservationName;
             this.roomType = roomType;
-			this.isCleaned = isDirty;
-			this.isOccupated = false;
+            this.isCleaned = isCleaned;
+            this.isOccupated = isOccupated;
         }
 
 
@@ -38,31 +30,31 @@ namespace Hotel_Res.Models
         public bool IsOccupated
 		{
 			get { return isOccupated; }
-			private set { isOccupated = value; }
+			set { isOccupated = value; }
 		}
 
 		public bool IsCleaned
 		{
 			get { return isCleaned; }
-			private set { isCleaned = value; }
+			set { isCleaned = value; }
 		}
 
 		public string RoomType
 		{
 			get { return roomType; }
-			private set { roomType = value; }
+			set { roomType = value; }
 		}
 
 		public string ReservationName
 		{
 			get { return reservationName; }
-			private set { reservationName = value; }
+			set { reservationName = value; }
 		}
 
 		public int RoomNumber
 		{
 			get { return roomNumber; }
-			private set { roomNumber = value; }
+			set { roomNumber = value; }
 		}
 
 	}
