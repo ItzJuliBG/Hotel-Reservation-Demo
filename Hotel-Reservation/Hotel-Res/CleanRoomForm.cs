@@ -96,31 +96,17 @@ namespace Hotel_Res
                         MessageBox.Show($"Стаята е изчистена!");
                         Room roomToAdd;
 
-                        foreach (var room in Rooms)
-                        {
-
-                            if (room.RoomNumber == inputNumber)
-                            {
-                                roomToAdd = new Room(room.RoomNumber, room.ReservationName, room.RoomType, currentRoom.IsCleaned, currentRoom.IsOccupated);
-                            }
-                            else
-                            {
-                                roomToAdd = new Room(room.RoomNumber, "", room.RoomType, true, false);
-                            }
-
-                            newListRooms.Add(roomToAdd);
-                        }
-
+                        var index = Rooms.IndexOf(currentRoom);
+                        Rooms.RemoveAt(index);
+                        Rooms.Insert(index, currentRoom);
                         string filePath2 = FilePaths.ReservationFileSavePath;
                         using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
 
-                            foreach (var room in newListRooms)
+                            foreach (var room in Rooms)
                             {
                                 writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
                             }
                     }
-
-
                 }
             }
             else

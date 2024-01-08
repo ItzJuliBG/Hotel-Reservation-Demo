@@ -1,7 +1,7 @@
 1, , Апартамент, True, False
-2, Pesho kusiq, Стая, False, True
+2, milen, Стая, False, True
 3, , Апартамент, True, False
-4, Ivan, Стая, False, True
+4, , Стая, True, False
 5, , Апартамент, True, False
 6, , Стая, True, False
 7, , Апартамент, True, False
