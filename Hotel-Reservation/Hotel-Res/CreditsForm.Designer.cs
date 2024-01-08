@@ -75,7 +75,7 @@
             // 
             title.AutoSize = true;
             title.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            title.Location = new Point(333, 9);
+            title.Location = new Point(243, 6);
             title.Name = "title";
             title.Size = new Size(99, 46);
             title.TabIndex = 5;
@@ -118,11 +118,11 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(233, 375);
+            label4.Location = new Point(175, 382);
             label4.Name = "label4";
-            label4.Size = new Size(337, 46);
+            label4.Size = new Size(450, 46);
             label4.TabIndex = 19;
-            label4.Text = "Валентин ? Малаков";
+            label4.Text = "walentin valentinow malakov";
             // 
             // CreditsForm
             // 

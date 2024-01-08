@@ -67,9 +67,6 @@ namespace Hotel_Res
             Form1 form = new Form1();
             form.Show();
         }
-
-
-
         private void button1_Click(object sender, EventArgs e)
         {
             int roomNumber = int.Parse(textBox1.Text);
@@ -92,49 +89,20 @@ namespace Hotel_Res
                 {
                     roomToUpdate.IsOccupated = true;
                     roomToUpdate.IsCleaned = false;
+                    roomToUpdate.ReservationName = reservationName;
 
-                    Room roomToAdd;
-                    for (int i = 1; i <= 30; i++)
-                    {
-
-
-                        if (i % 2 == 0)
-                        {
-                            string roomType = "Стая";
-                            if (i == roomNumber)
-                            {
-                                roomToAdd = new Room(i, reservationName, roomType, roomToUpdate.IsCleaned, roomToUpdate.IsOccupated);
-                            }
-                            else
-                            {
-                                roomToAdd = new Room(i, "", roomType, true, false);
-                            }
-                        }
-                        else
-                        {
-                            string roomType = "Апартамент";
-                            if (i == roomNumber)
-                            {
-                                roomToAdd = new Room(i, reservationName, roomType, roomToUpdate.IsCleaned, roomToUpdate.IsOccupated);
-                            }
-                            else
-                            {
-                                roomToAdd = new Room(i, "", roomType, true, false);
-                            }
-                        }
-
-                        newListRooms.Add(roomToAdd);
-                    }
+                    var index = Rooms.IndexOf(roomToUpdate);
+                    Rooms.RemoveAt(index);
+                    Rooms.Insert(index, roomToUpdate);
 
                     string filePath2 = FilePaths.ReservationFileSavePath;
                     using (StreamWriter writer = new StreamWriter(filePath2))//problem here with true value for append
 
-                        foreach (var room in newListRooms)
+                        foreach (var room in Rooms)
                         {
                             writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
 
                         }
-
 
                     MessageBox.Show($"Успешно направена резервация на името на {reservationName}!");
                 }
@@ -143,16 +111,7 @@ namespace Hotel_Res
                     MessageBox.Show($"Стаята не е изчистена. {Environment.NewLine}Резервацията не е възможна!");
                 }
             }
-
         }
-
-
-
-
-
-
-
-
         private void label2_Click(object sender, EventArgs e)
         {
 

@@ -50,14 +50,12 @@ namespace Hotel_Res
                 }
             }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
             this.Hide();
             Form1 form = new Form1();
             form.Show();
         }
-
         private void button1_Click(object sender, EventArgs e)
         {
             string input = textBox1.Text;
@@ -81,33 +79,32 @@ namespace Hotel_Res
                         currentRoom.IsOccupated = false;
                         currentRoom.ReservationName = "";
                         MessageBox.Show($"Стаята е освободена!");
+
+                        Room roomToAdd;
+
+                        foreach (var room in Rooms)
+                        {
+
+                            if (room.RoomNumber == inputNumber)
+                            {
+                                roomToAdd = new Room(room.RoomNumber, room.ReservationName, room.RoomType, currentRoom.IsCleaned, currentRoom.IsOccupated);
+                            }
+                            else
+                            {
+                                roomToAdd = new Room(room.RoomNumber, "", room.RoomType, true, false);
+                            }
+
+                            newListRooms.Add(roomToAdd);
+                        }
+
+                        string filePath2 = FilePaths.ReservationFileSavePath;
+                        using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
+
+                            foreach (var room in newListRooms)
+                            {
+                                writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
+                            }
                     }
-
-                    Room roomToAdd;
-
-                    foreach (var room in Rooms)
-                    {
-
-                        if (room.RoomNumber == inputNumber)
-                        {
-                            roomToAdd = new Room(room.RoomNumber, room.ReservationName, room.RoomType, currentRoom.IsCleaned, currentRoom.IsOccupated);
-                        }
-                        else
-                        {
-                            roomToAdd = new Room(room.RoomNumber, "", room.RoomType, true, false);
-                        }
-
-                        newListRooms.Add(roomToAdd);
-                    }
-
-                    string filePath2 =FilePaths.ReservationFileSavePath;
-                    using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
-
-                        foreach (var room in newListRooms)
-                        {
-                            writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
-                        }
-
                 }
             }
             else

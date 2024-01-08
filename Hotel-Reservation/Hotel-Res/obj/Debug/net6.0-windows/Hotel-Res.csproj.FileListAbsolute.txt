@@ -63,6 +63,5 @@ C:\Users\konst\OneDrive\Работен плот\Hotel-Reservation-Demo-main (1)\
 C:\Users\konst\OneDrive\Работен плот\Hotel-Reservation-Demo-main (1)\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.FreeingRoomForm.resources
 C:\Users\konst\OneDrive\Работен плот\Hotel-Reservation-Demo-main (1)\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.CleanRoomForm.resources
 C:\Users\konst\OneDrive\Работен плот\Hotel-Reservation-Demo-main (1)\Hotel-Reservation-Demo-main\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.FindRoomForm.resources
-X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.FindRoomForm.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.FreeingRoomForm.resources
 X:\School Projects\Hotel-Reservation-Demo\Hotel-Reservation\Hotel-Res\obj\Debug\net6.0-windows\Hotel_Res.FindingRoomForm.resources

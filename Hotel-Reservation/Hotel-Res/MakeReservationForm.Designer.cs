@@ -102,6 +102,7 @@
             // 
             // button1
             // 
+            button1.Cursor = Cursors.Hand;
             button1.Font = new Font("Segoe UI Semibold", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
             button1.Location = new Point(261, 356);
             button1.Name = "button1";

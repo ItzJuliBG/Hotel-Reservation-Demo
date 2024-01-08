@@ -46,8 +46,21 @@ namespace Hotel_Res
             }
 
             dataGridView1.DataSource = Rooms;
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                for (int i = 0; i < 2; i++)
+                {
+                    if (Convert.ToBoolean(row.Cells[i].Value) == true)
+                    {
+                        row.Cells[i].Style.BackColor = Color.Green; 
+                    }
+                    else if (Convert.ToBoolean(row.Cells[i].Value) == false)
+                    {
+                        row.Cells[i].Style.BackColor = Color.Red;
+                    }
+                }
+            }
         }
-
         private void pictureBox1_Click(object sender, EventArgs e)
         {
 
