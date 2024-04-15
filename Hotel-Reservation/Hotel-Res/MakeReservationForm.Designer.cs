@@ -42,15 +42,16 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 21F, FontStyle.Regular, GraphicsUnit.Point);
+            label1.Font = new Font("Georgia", 21F, FontStyle.Regular, GraphicsUnit.Point);
             label1.Location = new Point(205, 48);
             label1.Name = "label1";
-            label1.Size = new Size(356, 38);
+            label1.Size = new Size(359, 32);
             label1.TabIndex = 0;
             label1.Text = "Въведете номер на стаята:";
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.FromArgb(180, 158, 244);
             textBox1.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(149, 101);
             textBox1.Name = "textBox1";
@@ -60,6 +61,7 @@
             // 
             // textBox2
             // 
+            textBox2.BackColor = Color.FromArgb(180, 158, 244);
             textBox2.Font = new Font("Segoe UI", 18F, FontStyle.Regular, GraphicsUnit.Point);
             textBox2.Location = new Point(149, 233);
             textBox2.Name = "textBox2";
@@ -69,10 +71,10 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 21F, FontStyle.Regular, GraphicsUnit.Point);
+            label2.Font = new Font("Georgia", 21F, FontStyle.Regular, GraphicsUnit.Point);
             label2.Location = new Point(241, 174);
             label2.Name = "label2";
-            label2.Size = new Size(275, 38);
+            label2.Size = new Size(276, 32);
             label2.TabIndex = 2;
             label2.Text = "Име на резервация:";
             label2.Click += label2_Click;
@@ -102,20 +104,23 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.FromArgb(73, 77, 95);
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI Semibold", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.Font = new Font("Georgia", 18.75F, FontStyle.Bold, GraphicsUnit.Point);
+            button1.ForeColor = Color.LightGray;
             button1.Location = new Point(261, 356);
             button1.Name = "button1";
             button1.Size = new Size(255, 68);
             button1.TabIndex = 16;
             button1.Text = "Резервиране";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // MakeReservationForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.MediumPurple;
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(pictureBox2);

@@ -64,7 +64,7 @@ namespace Hotel_Res
                 int inputNumber = int.Parse(input);
                 if (inputNumber < 1 || inputNumber > 30)
                 {
-                    MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
+                    MessageBox.Show(ExceptionMessages.nonExistantRoomNumber);
                 }
                 else
                 {
@@ -89,7 +89,7 @@ namespace Hotel_Res
                         string filePath2 = FilePaths.ReservationFileSavePath;
                         using (StreamWriter writer = new StreamWriter(filePath2)) //problem here with true value for append
 
-                            foreach (var room in Rooms )
+                            foreach (var room in Rooms)
                             {
                                 writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
                             }
@@ -100,6 +100,11 @@ namespace Hotel_Res
             {
                 MessageBox.Show("Използвайте само числа!");
             }
+        }
+
+        private void FreeingRoomForm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

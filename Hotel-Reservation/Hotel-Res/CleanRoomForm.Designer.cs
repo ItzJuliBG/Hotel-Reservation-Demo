@@ -40,16 +40,17 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 23F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(172, 114);
+            label1.Font = new Font("Georgia", 23.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Location = new Point(140, 114);
             label1.Name = "label1";
-            label1.Size = new Size(437, 42);
+            label1.Size = new Size(507, 36);
             label1.TabIndex = 0;
             label1.Text = "Номер на стая за изчистване:";
             label1.Click += label1_Click;
             // 
             // textBox1
             // 
+            textBox1.BackColor = Color.LavenderBlush;
             textBox1.Font = new Font("Microsoft Sans Serif", 19.69F, FontStyle.Regular, GraphicsUnit.Point);
             textBox1.Location = new Point(140, 195);
             textBox1.Name = "textBox1";
@@ -81,20 +82,22 @@
             // 
             // button1
             // 
+            button1.BackColor = Color.LavenderBlush;
             button1.Cursor = Cursors.Hand;
-            button1.Font = new Font("Segoe UI", 16F, FontStyle.Regular, GraphicsUnit.Point);
+            button1.Font = new Font("Georgia", 15.75F, FontStyle.Regular, GraphicsUnit.Point);
             button1.Location = new Point(259, 289);
             button1.Name = "button1";
             button1.Size = new Size(253, 68);
             button1.TabIndex = 18;
             button1.Text = "Маркирай като изчистена";
-            button1.UseVisualStyleBackColor = true;
+            button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
             // 
             // CleanRoomForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(208, 189, 244);
             ClientSize = new Size(800, 450);
             Controls.Add(button1);
             Controls.Add(pictureBox2);

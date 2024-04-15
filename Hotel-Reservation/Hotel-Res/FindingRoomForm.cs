@@ -60,7 +60,7 @@ namespace Hotel_Res
             {
                 if (parsedInput < 1 || parsedInput > 30)
                 {
-                    MessageBox.Show($"Моля въведете номер на стая между 1-30!");
+                    MessageBox.Show(ExceptionMessages.nonExistantRoomNumber);
                 }
                 else
                 {
@@ -71,7 +71,7 @@ namespace Hotel_Res
             }
             else
             {
-                MessageBox.Show($"Моля въведете номер на стая между 1-30!");
+                MessageBox.Show(ExceptionMessages.useOnlyNums);
             }
         }
 

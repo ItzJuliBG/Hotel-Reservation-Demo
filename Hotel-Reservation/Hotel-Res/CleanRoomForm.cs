@@ -22,6 +22,38 @@ namespace Hotel_Res
         public CleanRoomForm()
         {
             InitializeComponent();
+
+            LoadingData();
+           
+        }
+        private void CleanRoomForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form1 form = new Form1();
+            form.Show();
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            CleanRoom();
+        }
+        public void LoadingData()
+        {
             Rooms = new List<Room>();
 
             string filePath2 = FilePaths.ReservationFileSavePath;
@@ -49,29 +81,8 @@ namespace Hotel_Res
                 }
             }
         }
-        private void CleanRoomForm_Load(object sender, EventArgs e)
-        {
 
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            Form1 form = new Form1();
-            form.Show();
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button1_Click(object sender, EventArgs e)
+        public void CleanRoom()
         {
             string input = textBox1.Text;
             if (int.TryParse(input, out _))
@@ -79,7 +90,7 @@ namespace Hotel_Res
                 int inputNumber = int.Parse(input);
                 if (inputNumber < 1 || inputNumber > 30)
                 {
-                    MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
+                    MessageBox.Show(ExceptionMessages.nonExistantRoomNumber);
                 }
                 else
                 {
@@ -87,13 +98,13 @@ namespace Hotel_Res
 
                     if (currentRoom.IsCleaned == true)
                     {
-                        MessageBox.Show($"Тази стая е чиста вече!");
+                        MessageBox.Show(ExceptionMessages.roomAlreadyCleaned);
                     }
                     else
                     {
                         currentRoom.IsCleaned = true;
 
-                        MessageBox.Show($"Стаята е изчистена!");
+                        MessageBox.Show(ExceptionMessages.roomCleanedSuccessfully);
                         Room roomToAdd;
 
                         var index = Rooms.IndexOf(currentRoom);
@@ -111,7 +122,7 @@ namespace Hotel_Res
             }
             else
             {
-                MessageBox.Show("Използвайте само числа!");
+                MessageBox.Show(ExceptionMessages.useOnlyNums);
             }
         }
     }

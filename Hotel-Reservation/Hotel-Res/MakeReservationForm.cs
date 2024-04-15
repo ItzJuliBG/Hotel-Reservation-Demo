@@ -43,6 +43,7 @@ namespace Hotel_Res
                     bool isCleaned = bool.Parse(newLine[3]);
                     bool isOccupated = bool.Parse(newLine[4]);
 
+
                     var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
 
                     Rooms.Add(roomToAdd);
@@ -74,12 +75,12 @@ namespace Hotel_Res
 
             if (roomNumber <= 0 || roomNumber > 30)
             {
-                MessageBox.Show($"Такъв номер на стая не съществува! Стаите са с номера от 1-30!");
+                MessageBox.Show(ExceptionMessages.nonExistantRoomNumber);
 
             }
             else if (reservationName == null || reservationName == "")
             {
-                MessageBox.Show($"Името на резервацията е задължително!");
+                MessageBox.Show(ExceptionMessages.reservationNameNecessary);
 
             }
             else
@@ -104,11 +105,11 @@ namespace Hotel_Res
 
                         }
 
-                    MessageBox.Show($"Успешно направена резервация на името на {reservationName}!");
+                    MessageBox.Show(ExceptionMessages.doneReservation, reservationName);
                 }
                 else
                 {
-                    MessageBox.Show($"Стаята не е изчистена. {Environment.NewLine}Резервацията не е възможна!");
+                    MessageBox.Show(ExceptionMessages.impossibleReservation);
                 }
             }
         }

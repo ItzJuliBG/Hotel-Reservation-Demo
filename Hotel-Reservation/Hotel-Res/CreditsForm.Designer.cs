@@ -55,17 +55,18 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            label1.Location = new Point(149, 118);
+            label1.Location = new Point(160, 140);
             label1.Name = "label1";
             label1.Size = new Size(493, 46);
             label1.TabIndex = 0;
             label1.Text = "Константин Христианов Ганев";
+            label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            label2.Location = new Point(176, 210);
+            label2.Location = new Point(160, 209);
             label2.Name = "label2";
             label2.Size = new Size(449, 46);
             label2.TabIndex = 4;
@@ -107,7 +108,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            label3.Location = new Point(176, 294);
+            label3.Location = new Point(160, 281);
             label3.Name = "label3";
             label3.Size = new Size(466, 46);
             label3.TabIndex = 18;
@@ -118,7 +119,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 25F, FontStyle.Regular, GraphicsUnit.Point);
-            label4.Location = new Point(175, 382);
+            label4.Location = new Point(160, 352);
             label4.Name = "label4";
             label4.Size = new Size(450, 46);
             label4.TabIndex = 19;

@@ -40,6 +40,7 @@
             // 
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.DisplayedCells;
+            dataGridView1.BackgroundColor = Color.FromArgb(160, 210, 235);
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridView1.Location = new Point(30, 103);
             dataGridView1.Name = "dataGridView1";
@@ -77,6 +78,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            BackColor = Color.FromArgb(160, 210, 235);
             ClientSize = new Size(800, 450);
             Controls.Add(pictureBox2);
             Controls.Add(button2);
