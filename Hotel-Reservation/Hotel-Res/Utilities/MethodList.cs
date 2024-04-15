@@ -13,30 +13,31 @@ namespace Hotel_Res.Utilities
         public void LoadingData(List<Room> Rooms)
         {
             string filePath2 = FilePaths.ReservationFileSavePath;
-            using StreamReader reader = new StreamReader(filePath2);
-
-            while (reader.EndOfStream != true)
+            using (StreamReader reader = new StreamReader(filePath2))
             {
-                var tempVariable = reader.ReadLine();
-                var newLine = tempVariable.Split(", ");
-                int roomNumber = int.Parse(newLine[0]);
-                string name = newLine[1];
-                string roomType = newLine[2];
-                bool isCleaned = bool.Parse(newLine[3]);
-                bool isOccupated = bool.Parse(newLine[4]);
 
-                var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
+                while (reader.EndOfStream != true)
+                {
+                    var tempVariable = reader.ReadLine();
+                    var newLine = tempVariable.Split(", ");
+                    int roomNumber = int.Parse(newLine[0]);
+                    string name = newLine[1];
+                    string roomType = newLine[2];
+                    bool isCleaned = bool.Parse(newLine[3]);
+                    bool isOccupated = bool.Parse(newLine[4]);
 
-                Rooms.Add(roomToAdd);
+                    var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
+
+                    Rooms.Add(roomToAdd);
+
+                }
 
             }
-
         }
 
         public void ReturnToHome()
         {
             Form1 form1 = new Form1();
-            form1.Hide();
             form1.Show();
         }
 

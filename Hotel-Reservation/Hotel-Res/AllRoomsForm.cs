@@ -42,7 +42,7 @@ namespace Hotel_Res
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //call home
+            
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -52,6 +52,7 @@ namespace Hotel_Res
 
         private void button2_Click(object sender, EventArgs e)
         {
+            this.Hide();
             methodList.ReturnToHome();
         }
 

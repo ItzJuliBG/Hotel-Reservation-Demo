@@ -24,27 +24,29 @@ namespace Hotel_Res
             Rooms = new List<Room>();
 
             string filePath2 = FilePaths.ReservationFileSavePath;
-            using StreamReader reader = new StreamReader(filePath2);
-
-            int charsRemeining = reader.Peek();
-            if (charsRemeining > 1)
+            using (StreamReader reader = new StreamReader(filePath2))
             {
-                while (reader.EndOfStream != true)
+
+                int charsRemeining = reader.Peek();
+                if (charsRemeining > 1)
                 {
+                    while (reader.EndOfStream != true)
+                    {
 
-                    var t = reader.ReadLine();
-                    var newLine = t.Split(", ");
-                    int roomNumber = int.Parse(newLine[0]);
-                    string name = newLine[1];
-                    string roomType = newLine[2];
-                    bool isCleaned = bool.Parse(newLine[3]);
-                    bool isOccupated = bool.Parse(newLine[4]);
+                        var t = reader.ReadLine();
+                        var newLine = t.Split(", ");
+                        int roomNumber = int.Parse(newLine[0]);
+                        string name = newLine[1];
+                        string roomType = newLine[2];
+                        bool isCleaned = bool.Parse(newLine[3]);
+                        bool isOccupated = bool.Parse(newLine[4]);
 
 
-                    var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
+                        var roomToAdd = new Room(roomNumber, name, roomType, isCleaned, isOccupated);
 
-                    Rooms.Add(roomToAdd);
+                        Rooms.Add(roomToAdd);
 
+                    }
                 }
             }
         }

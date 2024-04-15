@@ -17,36 +17,38 @@ namespace Hotel_Reservations
 
             string filePath2 = FilePaths.ReservationFileSavePath;
 
-            using StreamReader reader = new StreamReader(filePath2);
-
-            if (reader.EndOfStream == true)
+            using (StreamReader reader = new StreamReader(filePath2))
             {
-                Room roomToAdd;
-                for (int i = 1; i <= 30; i++)
+
+                if (reader.EndOfStream == true)
                 {
-                    if (i % 2 == 0)
+                    Room roomToAdd;
+                    for (int i = 1; i <= 30; i++)
                     {
-                        string roomType = "Стая";
-                        roomToAdd = new Room(i, "", roomType, true, false);
-                    }
-                    else
-                    {
-                        string roomType = "Апартамент";
-                        roomToAdd = new Room(i, "", roomType, true, false);
+                        if (i % 2 == 0)
+                        {
+                            string roomType = "Стая";
+                            roomToAdd = new Room(i, "", roomType, true, false);
+                        }
+                        else
+                        {
+                            string roomType = "Апартамент";
+                            roomToAdd = new Room(i, "", roomType, true, false);
+                        }
+
+                        Rooms.Add(roomToAdd);
                     }
 
-                    Rooms.Add(roomToAdd);
+                    reader.Close();
+
+                    using (StreamWriter writer = new StreamWriter(filePath2))//problem here with true value for append
+
+                        foreach (var room in Rooms)
+                        {
+                            writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
+
+                        }
                 }
-
-                reader.Close();
-
-                using (StreamWriter writer = new StreamWriter(filePath2))//problem here with true value for append
-
-                    foreach (var room in Rooms)
-                    {
-                        writer.WriteLine($"{room.RoomNumber}, {room.ReservationName}, {room.RoomType}, {room.IsCleaned}, {room.IsOccupated}");
-
-                    }
             }
         }
         private void Form1_Load(object sender, EventArgs e)
